@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Let's test EPF notificaiton API</h1>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+<script> 
+
+function notificationApi(apiUrl, data) {
+	axios.post(apiUrl, data)
+	  .then(function (response) {
+		console.log(response);
+	  })
+	  .catch(function (error) {
+		console.log(error);
+	  });
+}
+
+// notificationApi('https://api.exampathfinder.com/n/notification/log', { eventId: 'event3'})
+
+
+/* notificationApi('https://api.exampathfinder.com/n/notification/add', 
+{
+  "notificationId": "event102_noti101",
+  "eventId": "event102"
+}) */
+
+/*
+notificationApi('https://api.exampathfinder.com/n/notification/add-long', 
+{
+  "notificationId": "event102_noti101",
+  "eventId": "event102",
+  "notificationStatus": "This is notificatoin status 101",
+  "timeStamp": 1605794649530,
+  "notificationMsg": "This is notification long message 101"
+}) */
+
+/*
+notificationApi('https://api.exampathfinder.com/n/notification/edit', 
+{
+  "notificationId": "event102_noti101",
+  "eventId": "event102",
+  "notificationStatus": "I'm doing great",
+  "notificationMsg": "I am sorry"
+}) */
+
+/*
+notificationApi('https://api.exampathfinder.com/n/preset/add', 
+{
+  "userId": "277777",
+  "presetId": "477777_999",
+  "data": [
+    {
+      "fildName": "idontknow",
+      "filedType": "text",
+      "alias": [
+        "eligibility"
+      ]
+    },
+    {
+      "fildName": "salary2",
+      "filedType": "number"
+    },
+    {
+      "fildName": "marks",
+      "filedType": "number",
+      "basedOn": "gpa::0/4"
+    },
+    {
+      "fildName": "location",
+      "filedType": "number"
+    },
+    {
+      "fildName": "language",
+      "filedType": "text"
+    }
+  ]
+})
+*/
+
+/*
+notificationApi('https://api.exampathfinder.com/n/preset/read', 
+{
+  "userId": "277777"
+})
+*/
+
+notificationApi('https://api.exampathfinder.com/n/notification/lists', { userId: '277777'})
+</script>
+
+
+
+</body>
+
+</html>
