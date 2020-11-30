@@ -21,12 +21,15 @@ function notificationApi(apiUrl, data) {
 // notificationApi('https://api.exampathfinder.com/n/notification/log', { eventId: 'event3'})
 
 
+/*
 notificationApi('https://api.exampathfinder.com/n/notification/add', 
 {
   "notificationStatus": "Hello guys what is up 3?"	,
   "notificationId": "2245672",
   "eventId": "event3"
 })
+
+*/
 
 /*
 notificationApi('https://api.exampathfinder.com/n/notification/add-long', 
@@ -88,12 +91,27 @@ notificationApi('https://api.exampathfinder.com/n/preset/read',
 })
 */
 
+
 /*
 notificationApi('https://api.exampathfinder.com/n/notification/lists', { 
 userId: '77777',
 start: 1,
 end: 4,
-}) */
+})
+*/
+
+notificationApi('https://api.exampathfinder.com/n/notification/lists-detail', {
+  "notifications": [
+    {
+      "eventId": "event102",
+      "notificationId": "event102_noti1"
+    },
+    {
+      "eventId": "event102",
+      "notificationId": "event102_noti100"
+    }
+  ]
+})
 </script>
 
 
